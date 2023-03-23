@@ -1,0 +1,13 @@
+version: "2"
+services:
+  flask:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flask
+    environment:
+      - FLASK_APP=main.py
+    volumes:
+      - ./ids-tt-app:/home/myapp/
+    ports:
+      - 80:80
